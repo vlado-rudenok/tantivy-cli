@@ -9,3 +9,5 @@ meta.json
 *.meta
 *.zst
 *.zip
+
+input/

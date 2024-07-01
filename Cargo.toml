@@ -27,7 +27,7 @@ urlencoded = "0.6"
 mount = "0.4"
 log = "0.4"
 env_logger = "0.10"
-tantivy = "0.22.0"
+tantivy = { git = "https://github.com/vlado-rudenok/tantivy.git", branch = "release/v22" }
 crossbeam-channel = "0.5.8"
 
 [[bin]]
