@@ -40,22 +40,13 @@ for folder in "${language_folders[@]}"; do
     # Enter the index-$folder directory
     index_folder="$folder_path/index-$folder"
     if [ -d "$index_folder" ]; then
-      # Create zip archive with all non-hidden files
-      zip_file="$index_folder.zip"
-      zip -r "$zip_file" "$index_folder"/*
+      # Create zip archive with all non-hidden files, stripping out directory paths
+      zip_file="$output_dir/index-$folder.zip"
+      zip -j "$zip_file" "$index_folder"/*
 
       # Check if the zip command was successful
       if [ $? -ne 0 ]; then
         echo "Error creating zip archive. Exiting."
-        exit 1
-      fi
-
-      # Copy the zip archive to /output
-      cp "$zip_file" "$output_dir/"
-
-      # Check if the copy command was successful
-      if [ $? -ne 0 ]; then
-        echo "Error copying zip archive to /output. Exiting."
         exit 1
       fi
 
