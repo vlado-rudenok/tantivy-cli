@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of language directories from the given list, sorted alphabetically
-language_folders=("af" "de" "en" "es" "fr" "hi" "hu" "id" "it" "ja" "lug" "mya" "nl" "pl" "pt" "ro" "ru" "run" "rw" "sr" "sw" "ta" "te" "teo" "yor" "zh")
+language_folders=("af" "amh" "ceb" "cs" "de" "en" "es" "fr" "hi" "hu" "id" "it" "ja" "khm" "ko" "lug" "mya" "nl" "or" "pl" "pt" "ro" "ru" "run" "rw" "sr" "ssw" "sw" "ta" "te" "teo" "tl" "yor" "zh" "zul")
 
 # Ensure the output directory exists
 output_dir="output"
@@ -29,7 +29,7 @@ for folder in "${language_folders[@]}"; do
     
     echo "Running cargo command on $folder_path"
 
-    cat "$folder_path/raw.json" | cargo run index -i "$folder_path/index-$folder"
+    cat "$folder_path/raw.json" | tantivy index -i "$folder_path/index-$folder"
 
     # Check if the cargo command was successful
     if [ $? -ne 0 ]; then
