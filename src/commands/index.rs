@@ -16,6 +16,7 @@ use tantivy::TantivyDocument;
 use time::Instant;
 
 use crate::commands::merge::run_merge;
+use crate::commands::stemmers_utils::register_stem_tokenizers;
 
 pub fn run_index_cli(argmatch: &ArgMatches) -> Result<(), String> {
     let index_directory = PathBuf::from(argmatch.get_one::<String>("index").unwrap());
@@ -54,6 +55,9 @@ fn run_index(
     force_merge: bool,
 ) -> tantivy::Result<()> {
     let index = Index::open_in_dir(&directory)?;
+
+    register_stem_tokenizers(&index);
+
     let schema = index.schema();
     let (line_sender, line_receiver) = crossbeam_channel::bounded(100);
     let (doc_sender, doc_receiver) = crossbeam_channel::bounded(100);

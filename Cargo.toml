@@ -27,8 +27,14 @@ urlencoded = "0.6"
 mount = "0.4"
 log = "0.4"
 env_logger = "0.10"
-tantivy = { git = "https://github.com/vlado-rudenok/tantivy.git", branch = "release/v22" }
+tantivy = "0.22.0"
 crossbeam-channel = "0.5.8"
+tantivy-stemmers = { version = "0.4.0", features = [
+    "czech_dolamic_light",
+    "hindi_lightweight",
+    "indonesian_tala",
+    "polish_yarovoy_unaccented"
+] }
 
 [[bin]]
 name = "tantivy"
