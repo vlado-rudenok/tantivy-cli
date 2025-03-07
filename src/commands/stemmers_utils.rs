@@ -35,7 +35,6 @@ fn register_tantivy_languages(index: &Index) {
 }
 
 fn register_custom_languages(index: &Index) {
-    register_language_tokenizer(&index, "cs_stem", algorithms::czech_dolamic_light);
     register_language_tokenizer(&index, "hi_stem", algorithms::hindi_lightweight);
     register_language_tokenizer(&index, "id_stem", algorithms::indonesian_tala);
     register_language_tokenizer(&index, "lit_stem", algorithms::lithuanian_jocas);
