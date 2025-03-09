@@ -5,7 +5,7 @@ language_folders=(
   "af" "amh" "ar" "bem" "ben" "ceb" "cre" "cs" "de" "emk" "en" "es" "ewe" "fa" "fin" "fon" 
   "fr" "hi" "hr" "hu" "id" "it" "ja" "kde" "khm" "kng" "ko" "kya" "lit" "ln" "loz" "lua" 
   "lug" "lv" "lve" "mg" "ml" "mr" "mya" "ne" "nde" "nl" "nn" "nso" "nya" "or" "orm" "osh" 
-  "pa" "pl" "pt" "ro" "ru" "run" "rw" "slo" "sna" "sr" "ssw" "st" "sv" "sw" "ta" "te" "teo" 
+  "pa" "pl" "pt" "ro" "ru" "run" "rw" "sk" "sna" "sr" "ssw" "st" "sv" "sw" "ta" "te" "teo" 
   "tl" "tng" "tsn" "tso" "tum" "tur" "twi" "ua" "ur" "ven" "vi" "yor" "zh" "zho" "zul" "xho")
 
 # Ensure the output directory exists
