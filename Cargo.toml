@@ -19,16 +19,28 @@ iron = "0.6"
 staticfile = "0.5"
 serde = "1.0"
 serde_derive = "1.0"
-serde_json = "1.0"
+serde_json = "1.0.143"
 persistent = "0.4"
-clap = "4"
+clap = "4.5.46"
 ansi_term = "0.12"
 urlencoded = "0.6"
 mount = "0.4"
 log = "0.4"
-env_logger = "0.10"
-tantivy = "0.25"
+env_logger = "0.11.8"
+tantivy = "0.25.0"
 crossbeam-channel = "0.5.8"
+
+[dependencies.tantivy-stemmers]
+git = "https://github.com/vlado-rudenok/tantivy-stemmers"
+branch = "tech/dependencies-update"
+features = [
+  "finnish",
+  "hindi_lightweight",
+  "indonesian_tala",
+  "lithuanian_jocas",
+  "nepali",
+  "polish_yarovoy_unaccented",
+]
 
 [[bin]]
 name = "tantivy"

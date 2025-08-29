@@ -5,6 +5,7 @@ mod merge;
 mod new;
 mod search;
 mod serve;
+mod stemmers_utils;
 
 pub use self::bench::run_bench_cli;
 pub use self::index::run_index_cli;
