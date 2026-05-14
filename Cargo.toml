@@ -27,8 +27,20 @@ urlencoded = "0.6"
 mount = "0.4"
 log = "0.4"
 env_logger = "0.10"
-tantivy = "0.26"
+tantivy = "0.26.1"
 crossbeam-channel = "0.5.8"
+
+[dependencies.tantivy-stemmers]
+git = "https://github.com/vlado-rudenok/tantivy-stemmers"
+branch = "tech/dependencies-update"
+features = [
+  "finnish",
+  "hindi_lightweight",
+  "indonesian_tala",
+  "lithuanian_jocas",
+  "nepali",
+  "polish_yarovoy_unaccented",
+]
 
 [[bin]]
 name = "tantivy"
