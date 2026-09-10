@@ -36,6 +36,7 @@ fn register_tantivy_languages(index: &Index) {
 
 fn register_custom_languages(index: &Index) {
     register_language_tokenizer(&index, "hi_stem", algorithms::hindi_lightweight);
+    register_language_tokenizer(&index, "hye_stem", algorithms::armenian_mkrtchyan);
     register_language_tokenizer(&index, "id_stem", algorithms::indonesian_tala);
     register_language_tokenizer(&index, "lit_stem", algorithms::lithuanian_jocas);
     register_language_tokenizer(&index, "ne_stem", algorithms::nepali);

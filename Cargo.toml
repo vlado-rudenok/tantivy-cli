@@ -34,6 +34,7 @@ crossbeam-channel = "0.5.8"
 git = "https://github.com/vlado-rudenok/tantivy-stemmers"
 branch = "tech/dependencies-update"
 features = [
+  "armenian_mkrtchyan",
   "finnish",
   "hindi_lightweight",
   "indonesian_tala",
